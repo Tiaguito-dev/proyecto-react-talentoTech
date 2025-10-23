@@ -1,0 +1,31 @@
+.header {
+    background-color: red;
+    display: flex;
+    align-items: center;
+    ;
+    /* Esto despues debería cambiarse por bootstrap */
+
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+        border-radius: 30px;
+        border-color: white;
+        border-style: solid;
+        width: 80vw;
+        margin: 0;
+        align-items: center;
+
+        li {
+            height: 88px;
+            align-content: center;
+        }
+    }
+}
+
+.logo {
+    width: 50px;
+    border-radius: 10px;
+    border-color: white;
+    border-style: solid;
+}
