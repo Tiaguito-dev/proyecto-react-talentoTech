@@ -1,0 +1,13 @@
+.boton-personalizado {
+    padding: 8px 16px;
+    background-color: #FF6F00;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.boton-personalizado:hover {
+    background-color: #853400;
+}

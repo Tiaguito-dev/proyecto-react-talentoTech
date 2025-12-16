@@ -1,8 +1,11 @@
+import Productos from '../components/Productos';
+
 const Catalogo = () => {
     return (
         <>
-            <h2>Catálogo de Productos</h2>
-            {/* Aquí se mostraría una lista de productos */}
+            <div className="container mt-5">
+                <Productos />
+            </div>
         </>
     );
 }

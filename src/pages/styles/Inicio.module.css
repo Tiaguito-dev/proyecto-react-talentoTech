@@ -1,0 +1,59 @@
+#borde {
+    border: 2px solid #FF6F00;
+}
+
+#boton1,
+#boton3 {
+    background-color: #FF6F00;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+    padding: 10px 16px;
+}
+
+#boton1:hover,
+#boton3:hover {
+    background-color: #853400;
+}
+
+#boton2 {
+    border: 2px solid #FF6F00;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+    color: black;
+    background-color: white;
+}
+
+#boton2:hover {
+    background-color: #FF6F00;
+    color: white;
+}
+
+#sectionHero {
+    background-image: url('../../assets/patines.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+#sectionHero>div {
+    background-color: #f8f9faaa;
+    backdrop-filter: blur(3px);
+    padding: 20px;
+
+}
+
+#tituloHero {
+    color: black;
+    text-shadow: 2px 2px #f8f9fa;
+}
+
+#subtituloHero {
+    color: #FF6F00;
+    /* Naranja cálido */
+    text-shadow: 1px 1px white;
+    /* Sombra para contraste suave */
+}

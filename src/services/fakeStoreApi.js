@@ -2,11 +2,11 @@
 
 const API_URL = "https://68f7e8e5f7fb897c66176d5f.mockapi.io/todoParaElPatinador/productos/";
 
-const fetchProductos = async () => {
+const getProductos = async () => {
     try {
         const respuesta = await fetch(API_URL);
         const productos = await respuesta.json();
-        console.log('Estoy en ./src/services/fakeStoreApi.js/fetchProductos():', productos);
+        console.log('Estoy en ./src/services/fakeStoreApi.js/getProductos():', productos);
         return productos;
     } catch (error) {
         let mensaje = ('Error al obtener los productos:', error);
@@ -15,4 +15,4 @@ const fetchProductos = async () => {
     }
 };
 
-export default fetchProductos
+export default getProductos

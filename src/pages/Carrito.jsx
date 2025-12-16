@@ -1,4 +1,4 @@
-import ItemCarrito from './ItemCarrito';
+import ItemCarrito from '../components/ItemCarrito';
 import { useContext } from 'react';
 import { CarritoContext } from "../context/CarritoContext"
 

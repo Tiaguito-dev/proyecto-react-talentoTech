@@ -1,9 +1,9 @@
 import TarjetaProducto from './TarjetaProducto';
 import { useEffect, useState } from 'react';
-import fetchProductos from '../services/fakeStoreApi';
+import getProductos from '../services/fakeStoreApi';
 import TarjetaError from './TarjetaError';
 
-const ProductosDestacados = () => {
+const Productos = () => {
 
     const [productos, setProductos] = useState([]);
     const [cargando, setCargando] = useState(true);
@@ -12,12 +12,11 @@ const ProductosDestacados = () => {
     useEffect(() => {
         const cargarProductos = async () => {
             try {
-                const productos = await fetchProductos();
+                const productos = await getProductos();
                 setProductos(productos);
             } catch (error) {
                 setError('Error al cargar los productos.');
             } finally {
-                // Finally se ejecuta siempre al final
                 setCargando(false);
             }
         };
@@ -31,14 +30,13 @@ const ProductosDestacados = () => {
 
     return (
         <>
-            <h2>Productos Destacados</h2>
-            <div>
+            <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5 justify-content-center">
                 {error ? (
                     <TarjetaError mensaje={error} />
                 ) : (
                     productos.map((producto, index) => (
-                        // ESTOY HAY QUE PONERLE UN LÍMITE
-                        <div key={index}>
+                        // Col define el contenedor de la tarjeta para que Bootstrap lo maneje en su grid system
+                        <div key={index} className='col d-flex justify-content-center'>
                             <TarjetaProducto producto={producto} />
                         </div>
                     ))
@@ -49,4 +47,4 @@ const ProductosDestacados = () => {
 
 };
 
-export default ProductosDestacados;
+export default Productos;

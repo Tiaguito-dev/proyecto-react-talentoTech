@@ -1,5 +1,6 @@
 import { useState } from "react";
 import DetalleProducto from "./DetalleProducto";
+import styles from './styles/TarjetaProducto.module.css';
 
 const TarjetaProducto = ({ producto }) => {
 
@@ -11,11 +12,21 @@ const TarjetaProducto = ({ producto }) => {
 
     return (
         <>
-            <div onClick={() => desplegarPantalla(producto)}>
-                <h3>{producto.name}</h3>
-                {/*Hay que ponerle un width maximo*/}
-                <img src={producto.image} alt={producto.alt} style={{ width: '200px', height: '200px' }} />
-                <p>Precio: ${producto.price}</p>
+            <div className={styles['card-container']}>
+
+                {/* Si el estilo no se aplica con ${styles['card-hover']} entonces no funciona*/}
+                <div className={`card shadow ${styles['card-hover']}`}
+                    style={{
+                        width: '18rem',
+                        cursor: 'pointer',
+                        transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+                    }} onClick={() => desplegarPantalla(producto)}>
+                    <img src={producto.image} alt={producto.alt} className={`card-img-top ${styles['card-image']}`} />
+                    <div className="card-body">
+                        <h5 className="card-title">{producto.name}</h5>
+                        <p className="cart-text">Precio: ${producto.price}</p>
+                    </div>
+                </div>
             </div>
 
             {/*ACÁ FUE EL ÚNICO LUGAR DONDE AGREGUÉ ESTILOS (SE LO PEDÍ AL CHAT) PARA QUE SE ENTIENDA LO QUE QUIERO HACER*/}

@@ -1,7 +1,9 @@
+import FormularioLogin from "../components/FormularioLogin";
+
 const Login = () => {
     return (
         <>
-            <p>Este es el login</p>
+            <FormularioLogin />
         </>
     );
 }
